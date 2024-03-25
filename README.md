@@ -10,3 +10,8 @@ Dans ce dépôt GitHub, vous trouverez l'ensemble des exercices du cours [Appren
 
 - [Énoncé](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P1C2/énoncé)
 - [Correction](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P1C2/correction)
+
+### P1C3
+
+- [Énoncé](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P1C3/énoncé)
+- [Correction](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P1C3/correction)

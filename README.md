@@ -8,5 +8,5 @@ Dans ce dépôt GitHub, vous trouverez l'ensemble des exercices du cours [Appren
 
 ### P1C2
 
-- [Énoncé](lien_vers_enonce.md)
-- [Correction](lien_vers_correction.md)
+- [Énoncé](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P1C2/énoncé)
+- [Correction](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P1C2/correction)

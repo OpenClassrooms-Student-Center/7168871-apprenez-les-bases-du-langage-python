@@ -25,4 +25,4 @@ Vous allez créer une calculatrice qui permettra d'effectuer une opération simp
 
 #### 6. Affichez le résultat contenu dans la variable `resultat` .
 
-**Attention** : Dans cet exercice, écrivez votre code dans la partie située sous la ligne `def main(). **Assurez-vous donc de tout indenter d'un cran** pour que votre code fonctionne correctement. Nous avons enveloppé votre code dans ce qu'on appelle une fonction, pour tester votre code nous avons dû imbriquer votre code dans cette fonction.
+**Attention** : Dans cet exercice, écrivez votre code dans la partie située sous la ligne `def main()`. **Assurez-vous donc de tout indenter d'un cran** pour que votre code fonctionne correctement. Nous avons enveloppé votre code dans ce qu'on appelle une fonction, pour tester votre code nous avons dû imbriquer votre code dans cette fonction.

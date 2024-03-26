@@ -4,7 +4,7 @@ Dans ce dépôt GitHub, vous trouverez l'ensemble des exercices du cours [Appren
 - Un dossier pour l'énoncé de l'exercice.
 - Un dossier pour la correction de l'exercice.
 
-## Exercices
+## Exercices P1
 
 ### P1C2
 
@@ -25,3 +25,8 @@ Dans ce dépôt GitHub, vous trouverez l'ensemble des exercices du cours [Appren
 
 - [Énoncé](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P1C5/énoncé)
 - [Correction](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P1C5/correction)
+
+### P1C6
+
+- [Énoncé](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P1C6/énoncé)
+- [Correction](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P1C6/correction)

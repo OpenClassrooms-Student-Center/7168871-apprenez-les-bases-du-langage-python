@@ -47,3 +47,20 @@ Dans ce dépôt GitHub, vous trouverez l'ensemble des exercices du cours [Appren
 
 - [Énoncé](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P2C3/énoncé)
 - [Correction](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P2C3/correction)
+
+## Exercices P3
+
+### P3C1
+
+- [Énoncé](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P3C1/énoncé)
+- [Correction](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P3C1/correction)
+
+### P3C2
+
+- [Énoncé](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P3C2/énoncé)
+- [Correction](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P3C2/correction)
+
+### P3C3
+
+- [Énoncé](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P3C3/énoncé)
+- [Correction](https://github.com/OpenClassrooms-Student-Center/7168871-apprenez-les-bases-du-langage-python/tree/main/P3C3/correction)

@@ -1,6 +1,4 @@
-def main():
-    # Ecrivez votre code ici !
-    # Attention tout votre code doit être indenté comme ce commentaire
+# Ecrivez votre code ici !
 
 
 # Ne touchez pas le code ci-dessous

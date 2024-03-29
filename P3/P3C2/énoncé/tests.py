@@ -56,5 +56,5 @@ def test_description_3():
 def test_conversion_dollar():
     output = run_main_file()
     assert "24.0" in output, "Le produit 1 n'est pas correctement convertit"
-    assert "36.0" in output, "Le produit 1 n'est pas correctement convertit"
-    assert "12.0" in output, "Le produit 1 n'est pas correctement convertit"
+    assert "36.0" in output, "Le produit 2 n'est pas correctement convertit"
+    assert "12.0" in output, "Le produit 3 n'est pas correctement convertit"

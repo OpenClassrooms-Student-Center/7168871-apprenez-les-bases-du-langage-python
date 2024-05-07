@@ -32,7 +32,9 @@ print("Liste des descriptions de produits :", descriptions_list)
 
 # Étape 3 : Conversion des prix en dollars
 for i, (name, price) in enumerate(products_list):
-    euro_price = int(price.split()[2].replace("€",""))
+    # Supprimer les caractères non numériques de la chaîne de prix
+    euro_price_str = ''.join(filter(str.isdigit, price.split()[2])) 
+    euro_price = int(euro_price_str)
     dollar_price = euro_price * 1.2
     products_list[i] = (name, f"{dollar_price}$")
 

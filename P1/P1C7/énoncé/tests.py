@@ -3,9 +3,9 @@ from main import fruits, couleur_banane
 def test_fruits_dictionnaire():
   assert isinstance(fruits, dict), "fruits n'est pas un dictionnaire"
 
-def test_banane_supprime():
-    element_to_check = "banane"
-    assert element_to_check not in fruits, "La clé banane n'a pas été correctement supprimée."
+def test_orange_supprime():
+    element_to_check = "orange"
+    assert element_to_check not in fruits, "La clé orange n'a pas été correctement supprimée."
 
 def test_pomme_valeur():
     expected_value = "vert"
@@ -20,10 +20,10 @@ def test_kiwi_dans_dictionnaire():
 def test_contenu_final_dictionnaire():
     assert "pomme" in fruits
     assert "kiwi" in fruits
-    assert "orange" in fruits
+    assert "banane" in fruits
     assert fruits["pomme"] == "vert"
     assert fruits["kiwi"] == "vert"
-    assert fruits["orange"] == "orange"
+    assert fruits["banane"] == "jaune"
 
 def test_extraire_couleur_banane():
     expected_value = "jaune"

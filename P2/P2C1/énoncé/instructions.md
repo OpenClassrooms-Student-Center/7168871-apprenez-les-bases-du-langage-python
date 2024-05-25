@@ -7,7 +7,7 @@ Vous allez créer une calculatrice qui permettra d'effectuer une opération simp
 #### 1. Créez deux variables `nombre_a_gauche` et `nombre_a_droite` , et affectez-leur chacune un nombre entier à l'aide d'un input.
 - La valeur pour **chaque variable** doit être assigné à l'aide de la fonction `input()` qui permet de demander à l'utilisateur d'entrer une chaine de caractère.
 
-#### 2. Créez une variable `operation` pour stocker le symbole d'opération **(+, -, * ou /)**. L'opérateur sera aussi demander à l'aide de la fonction `input()`.
+#### 2. Créez une variable `operation` pour stocker le symbole d'opération **(+, -, * ou /)**. L'opérateur sera aussi demandé à l'aide de la fonction `input()`.
 
 #### 3. Créez une dernière variable `resultat` initialisée à 0, qui contiendra ensuite le résultat du calcul.
 

@@ -5,7 +5,7 @@ import re
 def run_main_file():
     python_cmd = "python" if sys.version_info.major == 2 else "python3"
     
-    process = subprocess.Popen([python_cmd, "main.py"], stdout=subprocess.PIPE)
+    process = subprocess.Popen([python_cmd, "-X", "utf8", "main.py"], stdout=subprocess.PIPE) # problème de décodage à cause de "é" de étudiant dans main.py
     output, error = process.communicate()
 
     return output.decode()

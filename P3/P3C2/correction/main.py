@@ -1,42 +1,49 @@
 from bs4 import BeautifulSoup
 
-# Étape 1 : Extraction des informations souhaitées avec Beautiful Soup
-with open("index.html", 'r') as file:
-    soup = BeautifulSoup(file, 'html.parser')
+# Extraction des informations souhaitées avec Beautiful Soup
+with open("index.html", "r") as file:
+    soup = BeautifulSoup(file, "html.parser")
 
 # Extraction du titre de la page
 title = soup.title.string
+print("Titre de la page:", title)
 
 # Extraction du texte de la balise h1
-h1_text = soup.h1.string
+h1_text = soup.find("h1").string
+print("Texte de la balise h1:", h1_text)
+
+# Dictionnaire pour stocker les produits
+all_products = dict()
 
 # Extraction des noms et des prix des produits dans la liste
-products = soup.find_all('li')
-products_list = []
+products = soup.find_all("li")
 for product in products:
-    name = product.h2.string
-    price = product.find('p', string=lambda s: 'Prix' in s).string
-    products_list.append((name, price))
+    name = product.find("h2").string
+    price_str = product.find("p", class_="price").string
+    # On sépare la chaine avec " " en liste de mots
+    price_list = price_str.split(" ")
+    # On récupère le prix (= deuxième mot)
+    all_products[name] = {"prix": price_list[1]}
 
 # Extraction des descriptions des produits dans la liste
 descriptions_list = []
 for product in products:
-    description = product.find('p', string=lambda s: 'Description' in s).string
-    descriptions_list.append(description)
+    # La description eest le dernier élément de la liste des paragraphes
+    description = product.find_all("p")[-1].string
+    all_products[name]["description"] = description
 
-# Étape 2 : Affichage des informations extraites
-print("Titre de la page :", title)
-print("Texte de la balise h1 :", h1_text)
-print("Liste des produits :", products_list)
-print("Liste des descriptions de produits :", descriptions_list)
+# Affichage des informations extraites
+print("Produits:", all_products)
 
-# Étape 3 : Conversion des prix en dollars
-for i, (name, price) in enumerate(products_list):
-    # Supprimer les caractères non numériques de la chaîne de prix
-    euro_price_str = ''.join(filter(str.isdigit, price.split()[2])) 
-    euro_price = int(euro_price_str)
-    dollar_price = euro_price * 1.2
-    products_list[i] = (name, f"{dollar_price}$")
+# Transformation des prix en dollars
+for name in all_products.keys():
+    price_str = all_products[name]["prix"]
+    # Supprimer le symbole €
+    price = price_list[1].strip("€")
+    # Convertir en float
+    price = float(price)
+    dollar_price = price * 1.2
+    all_products[name]["prix_dollar"] = f"{dollar_price}$"
 
-# Étape 4 : Affichage de la nouvelle liste avec les prix en dollars
-print("Liste des produits :", products_list)
+# Affichage avec les prix en dollars
+print("Tous les produits:", all_products)

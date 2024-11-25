@@ -1,37 +1,34 @@
-def main():
-    nombre_a_gauche = input("Entrez un nombre entier : ")
-    nombre_a_droite = input("Entrez un nombre entier : ")
-    operation = input("Entrez l'opération souhaitée ['+', '-', '*' ou '/'] : ")
+nombre1 = input("Entrez un nombre entier: ")
+nombre2 = input("Entrez un nombre entier: ")
 
-    resultat = 0
+# isnumeric() permet de vérifier si la chaîne de caractères est un nombre
+if not nombre1.isnumeric() or not nombre2.isnumeric():
+    print("Erreur: les deux nombres doivent être des nombres entiers")
+    raise SystemExit("Fin du programme")
 
-    # Vérifie si les deux nombres sont valides avec la fonction
-    # isinstance (soit un integer, soit un float)
-    if not nombre_a_gauche.isnumeric() or not nombre_a_droite.isnumeric():
-        print("Erreur: les deux nombres doivent être des nombres entiers")
-    else:
-        nombre_a_gauche = int(nombre_a_gauche)
-        nombre_a_droite = int(nombre_a_droite)
-        
-        match operation:
-            case "+":
-                resultat = nombre_a_gauche + nombre_a_droite
-            case "-":
-                resultat = nombre_a_gauche - nombre_a_droite
-            case "*":
-                resultat = nombre_a_gauche * nombre_a_droite
-            case "/":
-                # Vérifie si la variable `nombre_a_droite` n'est pas nulle pour la division
-                if nombre_a_droite == 0:
-                    print("Erreur: impossible de diviser par zéro.")
-                else:
-                    resultat = nombre_a_gauche / nombre_a_droite
-            # Si on est dans le cas par défaut, c'est que le symbole est incorrect.
-            case _:
-                print("Erreur: le symbole d'opération doit être '+', '-', '*' ou '/'.")
+nombre1 = int(nombre1)
+nombre2 = int(nombre2)
 
-        # Affiche le résultat
-        print(f"Le résultat de l'opération est: {resultat}")
+operation = input("Entrez l'opération souhaitée ['+', '-', '*' ou '/']: ")
 
-if __name__ == "__main__":
-    main()
+if operation not in ["+", "-", "*", "/"]:
+    print("Erreur: le symbole d'opération doit être '+', '-', '*' ou '/'.")
+    raise SystemExit("Fin du programme")
+
+
+if operation == "+":
+    resultat = nombre1 + nombre2
+elif operation == "-":
+    resultat = nombre1 - nombre2
+elif operation == "*":
+    resultat = nombre1 * nombre2
+elif operation == "/":
+    # Vérifie si la variable `nombre2` n'est pas nulle pour la division
+    if nombre2 == 0:
+        print("Erreur: impossible de diviser par zéro.")
+        raise SystemExit("Fin du programme")
+
+    resultat = round(nombre1 / nombre2, 2)
+
+# Affiche le résultat
+print(f"Le résultat de l'opération est: {round(resultat, 2)}")

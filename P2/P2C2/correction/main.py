@@ -1,38 +1,48 @@
-def main():
-    # Récupérer la saisie de l'utilisateur
-    liste = input("Saisissez une liste de nombres séparés par des virgules : ")
+# Récupérer la saisie de l'utilisateur
+nombres = input("Saisissez une liste de nombres séparés par des virgules: ")
 
-    # Séparer l'ensemble des nombres et les insérer dans une liste
-    liste = liste.split(",")
-    # Afficher la liste des nombres
-    print("Liste des nombres :", liste)
+# Séparer l'ensemble des nombres et les insérer dans une liste
+liste = nombres.split(",")
+# Afficher la liste des nombres
+print("Liste des nombres:", liste)
 
-    # Calculer la somme des nombres
-    somme = 0
-    for nombre in liste:
-        somme += int(nombre)
-    print("Somme des nombres :", somme)
+# A ce stade liste est une liste de chaînes de caractères
+# Convertir chaque élément de la liste en entier
+liste_entiers = []
+for nombre in liste:
+    nombre_entier = int(nombre)
+    liste_entiers.append(nombre_entier)
 
-    # Effectuer la moyenne à l'aide de la somme des nombre
-    moyenne = somme / len(liste)
-    print("Moyenne des nombres :", moyenne)
 
-    # Trouver le nombre d'entier supérieur à la moyenne
-    nombre_sup_moyenne = 0
-    for nombre in liste:
-        if int(nombre) > moyenne:
-            nombre_sup_moyenne += 1
-    print("Nombre de nombres supérieurs à la moyenne :", nombre_sup_moyenne)
+# Calculer la somme des nombres
+somme = 0
+for nombre in liste_entiers:
+    somme += nombre
 
-    # Trouver le nombre d'entier pair
-    nombre_pairs = 0
-    i = 0
-    while i < len(liste):
-        if int(liste[i]) % 2 == 0:
-            nombre_pairs += 1
-        i += 1
-    print("Nombre de nombres pairs :", nombre_pairs)
+# Equivalent à:
+# somme = sum(liste_entiers)
 
-# Ne touchez pas le code ci-dessous
-if __name__ == "__main__":
-    main()
+print("Somme des nombres:", somme)
+
+# Effectuer la moyenne à l'aide de la somme des nombre
+moyenne = somme / len(liste_entiers)
+
+print("Moyenne des nombres:", moyenne)
+
+# Trouver combien de nombres de la liste sont supérieurs à la moyenne
+nombre_au_dessus_moyenne = 0
+for nombre in liste:
+    if nombre > moyenne:
+        nombre_au_dessus_moyenne += 1
+print("Nombre de nombres supérieurs à la moyenne:", nombre_au_dessus_moyenne)
+
+# Equivalent à:
+# nombre_au_dessus_moyenne = 0
+# idx = 0
+# while idx < len(liste_entiers):
+#     if liste_entiers[idx] > moyenne:
+#         nombre_au_dessus_moyenne += 1
+#     idx += 1
+# Attention! Il est déconseillé d'utiliser la boucle while pour parcourir une liste.
+
+print("Nombre de nombres pairs:", nombre_au_dessus_moyenne)

@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 
 # Extraction des informations souhaitées avec Beautiful Soup
-with open("index.html", "r") as file:
+with open("index.html", "r", encoding="utf-8") as file:
     soup = BeautifulSoup(file, "html.parser")
 
 # Extraction du titre de la page
@@ -24,10 +24,8 @@ for product in products:
     price_list = price_str.split(" ")
     # On récupère le prix (= deuxième mot)
     all_products[name] = {"prix": price_list[1]}
-
-# Extraction des descriptions des produits dans la liste
-descriptions_list = []
-for product in products:
+    
+    # Extraction de la description du produit
     # La description eest le dernier élément de la liste des paragraphes
     description = product.find_all("p")[-1].string
     all_products[name]["description"] = description
@@ -39,7 +37,7 @@ print("Produits:", all_products)
 for name in all_products.keys():
     price_str = all_products[name]["prix"]
     # Supprimer le symbole €
-    price = price_list[1].strip("€")
+    price = price_str.strip("€")
     # Convertir en float
     price = float(price)
     dollar_price = price * 1.2

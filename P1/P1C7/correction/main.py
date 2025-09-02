@@ -11,7 +11,7 @@ couleur_banane = fruits["banane"]
 fruits["pomme"] = "vert" 
 
 # 5. Suppression de la clé "orange" 
-del fruits["banane"] 
+del fruits["orange"] 
 
 # 6. Affichage des clés restantes dans le dictionnaire
 print(fruits.keys())

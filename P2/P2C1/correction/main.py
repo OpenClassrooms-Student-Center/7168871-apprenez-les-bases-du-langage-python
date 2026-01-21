@@ -1,34 +1,31 @@
-nombre1 = input("Entrez un nombre entier: ")
-nombre2 = input("Entrez un nombre entier: ")
 
-# isnumeric() permet de vérifier si la chaîne de caractères est un nombre
-if not nombre1.isnumeric() or not nombre2.isnumeric():
-    print("Erreur: les deux nombres doivent être des nombres entiers")
+a = input("entre le nombre 1: ")# premier nombre 
+b = input("Entre le nombre 2: ")# deuxieme nombre
+if not a.isnumeric() or not b.isnumeric() :
+    print("Les desux nombres sont entiers")
     raise SystemExit("Fin du programme")
+a = int(a)
+b = int(b)
 
-nombre1 = int(nombre1)
-nombre2 = int(nombre2)
-
-operation = input("Entrez l'opération souhaitée ['+', '-', '*' ou '/']: ")
-
-if operation not in ["+", "-", "*", "/"]:
-    print("Erreur: le symbole d'opération doit être '+', '-', '*' ou '/'.")
+op = input("Entre l'opération:  [ +, - , *,  / ]: ")
+if op not in ["+", "-", "/", "*" ]:
+    print("Erreur signe invalide")
     raise SystemExit("Fin du programme")
+if op == "+":
+    res = a+b
 
+elif op == "*":
+    res = a*b
 
-if operation == "+":
-    resultat = nombre1 + nombre2
-elif operation == "-":
-    resultat = nombre1 - nombre2
-elif operation == "*":
-    resultat = nombre1 * nombre2
-elif operation == "/":
-    # Vérifie si la variable `nombre2` n'est pas nulle pour la division
-    if nombre2 == 0:
-        print("Erreur: impossible de diviser par zéro.")
-        raise SystemExit("Fin du programme")
+elif op == "-":
+    res = a -b
 
-    resultat = round(nombre1 / nombre2, 2)
+elif op == "/":
+    if b ==0:
+        print("Erreur impossible de divisé par zéro")
+        raise SystemExit("Fin Du programme")
 
-# Affiche le résultat
-print(f"Le résultat de l'opération est: {round(resultat, 2)}")
+    res = round(a/b, 2)
+
+print(f"Le resultat de {a} {op} {b} est : {round(res,2)} ")
+
